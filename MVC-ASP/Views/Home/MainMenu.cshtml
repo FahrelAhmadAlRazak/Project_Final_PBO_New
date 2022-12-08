@@ -1,0 +1,76 @@
+﻿@{
+    ViewData["Title"] = "Cari Tiket";
+}
+
+@model MVC_ASP.Models.tiket
+<div class="cariTiket">
+    <h1>Pilih Tiket</h1>
+</div>
+
+<table class="table">
+    @*  <thead>
+    <tr>
+    <th scope="col">Id Tiket</th>
+    <th scope="col">No Penerbangan</th>
+    <th scope="col">Maskapai</th>
+    <th scope="col">Dari</th>
+    <th scope="col">Ke</th>
+    <th scope="col">Jam Keberangkatan</th>
+    <th scope="col">Waktu Tiba</th>
+    <th scope="col">Tanggal Berangkat</th>
+    <th scope="col">Harga</th>
+
+    </tr>
+    </thead>*@
+    <thead>
+        <tr>
+            <th scope="col">Id Tiket</th>
+            <th scope="col">Maskapai</th>
+            <th scope="col">Dari</th>
+            <th scope="col">Ke</th>
+            <th scope="col">Jam Keberangkatan</th>
+            <th scope="col">Waktu Tiba</th>
+            <th scope="col">Tanggal Berangkat</th>
+            <th scope="col">Harga</th>
+
+        </tr>
+    </thead>
+    <tbo@*dy> @{
+              var data = (List<tiket>)ViewData["data"]!;
+              foreach (var user in data)
+              {
+              <tr>
+              <td>@user.id_tiket</td>
+              <td>@user.no_penerbangan</td>
+              <td>@user.maskapai</td>
+              <td>@user.dari</td>
+              <td>@user.ke</td>
+              <td>@user.jam_keberangkatan</td>
+              <td>@user.waktu_tiba</td>
+              <td>@user.tanggal_berangkat</td>
+              <td>@user.harga</td>
+              </tr>
+              }
+              }
+              </tbody>*@
+    <tbody>
+            @{
+                var data = (List<tiket>)ViewData["data"]!;
+                //var a = (List<harga>)ViewData["data"]!;
+                foreach (var user in data)
+                {
+                        <tr>
+                            <td>@user.id_tiket</td>
+                            <td>@user.maskapai</td>
+                            <td>@user.dari</td>
+                            <td>@user.ke</td>
+                            <td>@user.jam_keberangkatan</td>
+                            <td>@user.waktu_tiba</td>
+                            <td>@user.tanggal_berangkat</td>
+                            <td>@user.harga</td>
+
+                        </tr>
+                }
+            }
+    </tbody>
+</table>

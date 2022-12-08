@@ -1,0 +1,69 @@
+﻿@{
+    ViewData["Title"] = "Edit Tiket";
+}
+
+@model MVC_ASP.Models.cekOrder1
+<div class="cariTiket">
+    <h1>Edit Tiket</h1>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID Tiket</th>
+            @*<th scope="col">No Penerbanga</th>*@
+            <th scope="col">ID Cek Order</th>
+            <th scope="col">Maskapai</th>
+            <th scope="col">Dari</th>
+            <th scope="col">Ke</th>
+            <th scope="col">Jam Keberangkatan</th>
+            <th scope="col">Waktu Tiba</th>
+            <th scope="col">Tanggal Berangkat</th>
+            <th scope="col">Harga</th>
+            <th scope="col">Username</th>
+            <th scope="col">Bangku</th>
+
+
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            var data = (List<cekOrder1>)ViewData["data"]!;
+            //var data1 = (List<cekOrder1>)ViewData["data"]!;
+            foreach (var user in data)
+            {
+                <tr>
+                    <td>@user.id_tiket</td>
+                    <td>@user.id_cekorder</td>
+                    <td>@user.maskapai</td>
+                    <td>@user.dari</td>
+                    <td>@user.ke</td>
+                    <td>@user.jam_keberangkatan</td>
+                    <td>@user.waktu_tiba</td>
+                    <td>@user.tanggal_berangkat</td>
+                    <td>@user.harga</td>
+                    <td>@user.username</td>
+                    <td>@user.bangku</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+<form asp-controller="Home" asp-action="editTiket" class="form_edit">
+    <div class="form-group">
+        <label asp-for="id_tiket">ID Cek Order</label>
+        <input type="text" asp-for="id_cekorder" class="form-control" id="id_cekorder" placeholder="ID Cek Order" />
+    </div>
+    <div class="form-group">
+        <label asp-for="username">Username</label>
+        <input type="text" asp-for="username" class="form-control" id="username" placeholder="Username" />
+    </div>
+    <div class="form-group">
+        <label asp-for="bangku">Bangku</label>
+        <input type="text" asp-for="bangku" class="form-control" id="bangku" placeholder="Bangku" />
+    </div>
+    
+    <button id="edit" type="submit" class="button-11" role="button">Simpan</button>
+</form>
+

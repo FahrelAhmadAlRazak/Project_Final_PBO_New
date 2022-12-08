@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "nc8dYcVG5SQIhyPAK9mTpJnBilr1KNmhmGsLp8Q470ngProGyd7R4hmSinBrDpXYg/Rqtmcm5hV5ANOPM7db+w==",
+  "success": true,
+  "projectFilePath": "C:\\SMT 3\\PBO PR\\MVC-ASP\\MVC-ASP\\MVC-ASP.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Fahrel Ahmad\\.nuget\\packages\\npgsql\\6.0.7\\npgsql.6.0.7.nupkg.sha512",
+    "C:\\Users\\Fahrel Ahmad\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
